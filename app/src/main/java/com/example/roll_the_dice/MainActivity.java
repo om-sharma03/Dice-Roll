@@ -1,13 +1,12 @@
 package com.example.roll_the_dice;
-import java.util.Random;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,13 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         diceImage= findViewById(R.id.dice_image);
-        diceImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                rotateDice();
-
-            }
-        });
+        diceImage.setOnClickListener(view -> rotateDice());
     }
 
     private void rotateDice() {
